@@ -2,9 +2,10 @@
 This project is to make baseline installation of a Linux distribution on a virtual machine and prepare it to host web applications. This includes install updates, secure it from a number of attack vectors and install/configure web and database servers.
 
 ## Note for reviewer:
-* Public IP address: 35.165.123.38
+* PUBLIC_IP address: 35.165.123.38
 * complete URL : http://ec2-35-165-123-38.us-west-2.compute.amazonaws.com/
 * SSH PORT : 2200
+* Password for 'grader' : adler0311
 
 ## Step by step
 ### 1. Launch your Virtual Machine with your Udacity account
@@ -72,7 +73,7 @@ Resources: [Ubuntu documentation](https://help.ubuntu.com/community/AutomaticSec
 5. Set permissions: `$ chmod 700 .ssh` `$ chmod 644 .ssh/authorized_keys`
 6. `$ nano /etc/ssh/sshd_config` and change `PasswordAuthentication` `yes` to `no` and save it and exit.
 7. Exit the sever and login with key pair:
-: ssh grader@Public_IP -p 2200 -i ~/.ssh/id_rsa
+: `$  ssh grader@Public_IP -p 2200 -i ~/.ssh/id_rsa`
 
 Sources: [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 
